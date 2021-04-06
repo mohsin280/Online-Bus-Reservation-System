@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Book</title>
+</head>
+<body>
+    <div id="fm">
+        
+        <form name="searchForm" action="search_ticket_db.jsp" target="iframe_b" onsubmit="return validation()" method="POST">
+            <label for="from">From:</label>
+
+                <select name="from" id="from">
+                <option value="Kolkata">Kolkata</option>
+                <option value="Banglore">Banglore</option>
+                <option value="Delhi">Delhi</option>
+                </select>
+                <label for="to">To:</label>
+
+                <select name="to" id="to">
+                <option value="Patna">Patna</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Mumbai">Mumbai</option>
+                </select>
+                <div id="cal">
+                    <label for="date">Date:</label>
+<input type="date" id="date" name="date">
+                </div>
+                
+                
+                <input type="submit" value="search" id="search">              
+        </form>
+        <iframe  name="iframe_b" height="200px" width="100%" title="Iframe Example"></iframe>
+        <div id="book">
+            <form name="bookForm" action="book_ticket_db.jsp"  onsubmit="return validation()" method="POST">
+                <label for="bus_id">Bus Id:</label>
+            <input type="number" id="bus_id" name="bus_id">
+                <label for="seat">Seat:</label>
+            <input type="number" id="seat" name="seat">
+            <label for="date1">Date:</label>
+            <input type="date" id="date" name="date1">             
+            <input type="submit" value="Book Now" id="booking">              
+        </form>
+        </div>
+        
+    
+</body>
+</html>
